@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.ri-compass-3-line{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+.nav-link {
+    color: #222222 !important;
+}
+.navbar{
+    background-color: white;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    flex-direction: column;
+    display: flex;
+    background-color: #ebebeb;
+    height: 11rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.f-info-socials i{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.f-info-socials i:hover{
+    color:white;
+    font-size: 3rem;
+
+}
+
+.listing-card{
+
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1 rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text p{
+    font-weight: 400 !important;
+
+}
+.linnk{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.show_img{
+    height: 40vh;
+}
+
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-right: 0;
+    padding-left: 0;
+}
