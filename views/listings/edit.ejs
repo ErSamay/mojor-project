@@ -3,7 +3,7 @@
     <div class="row mt-3" >
         <div class="col-8 offset-2">
     <h3>Edit New Listing</h3>
-    <form method = "POST" action = "/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" >
+    <form method = "POST" action = "/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
             <lable for="title" class="form-label">Title</lable>   
             <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required/>
@@ -14,7 +14,6 @@
                 Please Enter tittle
                </div>
         </div>
-
         <div class="mb-3">
             <lable for="description" class="form-label">Description</lable> 
             <textarea name="listing[description]" class="form-control"  required>
@@ -27,20 +26,17 @@
                 Please Enter Description
                </div>
         </div>
-        
-    
+        original listing imageb
+        <div class="mb-3 edit-img">
+         <img src="<%= listing.image.url %>" alt="">
+        </div>
         <div class="mb-3">
-            <lable for="image" class="form-label">Image Link</lable>
+            <lable for="image" class="form-label">Upload New Image</lable>
             <input
             name="listing[image]"
-            value="<%= listing.image %>"
-            type="text" class="form-control" required/>
-            <div class="valid-feedback">
-                Image-URL looks goods
-              </div>
-              <div class="invalid-feedback">
-                Please Enter Valid URL
-               </div>
+            type="file"
+            class="form-control"
+            />
         </div>
         <div class="row">
             <div class="mb-3 col-md-4">
@@ -63,8 +59,7 @@
                     Please Enter Valid Country
                    </div>
             </div>
-        </div>
-        
+        </div>   
         <div class="mb-3">
             <lable for="location" class="form-label">Location</lable> 
                    <input
@@ -79,11 +74,8 @@
                         Please Enter a Valid Location
                        </div>
         </div>
-    
-      
       <button class="btn btn-dark add-btn mt-3" >Edit</button>
     </form>
-   
 </div>
 </div>
 

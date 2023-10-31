@@ -99,3 +99,7 @@ body{
     padding-right: 0;
     padding-left: 0;
 }
+
+.edit-img img{
+    height: 170px;
+}

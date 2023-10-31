@@ -20,9 +20,8 @@ const listingSchema = new mongoose.Schema({
     } , 
     description : String , 
     image : {
-        type :  String ,
-        default : "https://t4.ftcdn.net/jpg/06/37/04/83/240_F_637048304_gG1q9XoPsy17wtqm1rCM8ke3EjENcq5N.jpg" , 
-        set : (v) => v === "" ? "https://t4.ftcdn.net/jpg/06/37/04/83/240_F_637048304_gG1q9XoPsy17wtqm1rCM8ke3EjENcq5N.jpg" : v,
+        url : String , 
+        filename : String , 
     } ,
     price : Number , 
     location : String , 
@@ -33,7 +32,11 @@ const listingSchema = new mongoose.Schema({
             ref : "Review" , 
 
         }
-    ]
+    ],
+    owner : {
+        type : Schema.Types.ObjectId,
+        ref : "User" ,  
+    }
 
 })
 listingSchema.post("findOneAndDelete" , async(listing) => {
